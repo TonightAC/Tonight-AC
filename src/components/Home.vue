@@ -30,7 +30,6 @@ export default {
     }
   },
   created () {
-    // document.getElementsByClassName('zoom').style.translate3d(0, 0, 0)
     this.axios.get('/rate/getRate').then(res => {
       if (res.data !== 'error') {
         this.ratedPeople = parseInt(res.data.ratedPeople)
