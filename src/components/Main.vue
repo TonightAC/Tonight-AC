@@ -6,7 +6,7 @@
           <el-col :span="6"><div style="margin-top: 10px">
             <el-dropdown trigger="click" class="mobile" style="margin-top: 15px; margin-left: 5px">
 <!--              <el-image style="font-size: 16px; margin-top: -4px; margin-left: -8px; width: 22px; height: 22px;" src="../assets/bulbOn.png" fit="fill"/>-->
-              <img style="font-size: 16px; margin-top: -4px; margin-left: -8px; width: 22px; height: 22px;" src="../assets/bulbOn.png"/>
+              <img style="font-size: 16px; margin-top: -4px; margin-left: -8px; width: 22px; height: 22px;" src="../assets/bulbOn.png"  alt="Bulb"/>
 <!--              <i class="el-icon-s-opportunity" style="font-size: 16px; margin-top: -2px" :style="{ color: bulbColor }"></i>-->
               <el-dropdown-menu slot="dropdown" style="margin-top: 21px">
                 <el-dropdown-item icon="el-icon-house" @click.native="switchHome">主页</el-dropdown-item>
@@ -58,7 +58,7 @@
         </el-row>
       </div>
     </el-header>
-    <el-container :style="{backgroundImage : backgroundImage}">
+    <el-container>
       <home v-show="blockChoice === 'home'" style="margin-top: 60px; z-index: 1; position: relative"></home>
       <experience v-show="blockChoice === 'experience'" style="margin-top: 60px; z-index: 1; position: relative"></experience>
       <board v-show="blockChoice === 'board'" style="margin-top: 60px; z-index: 1; position: relative"></board>
@@ -120,15 +120,15 @@ export default {
       nightMode: false,
       footerShow: true,
       experienceShow: false,
-      bulbPng: '../assets/bulbOn.png',
+      bulbPng: 'url(' + require('../assets/bulbOn.png') + ')',
       // bulbColor: '#FFB300',
       headerColor: '#FFFFFF',
       footerColor: null,
       starIcon: 'el-icon-star-off',
       defaultActive: 'home',
       blockChoice: 'home',
-      contain: '',
-      backgroundImage: 'url(' + require('../assets/background.jpg') + ')'
+      contain: ''
+      // backgroundImage: 'url(' + require('../assets/background.jpg') + ')'
     }
   },
   created () {
@@ -149,14 +149,16 @@ export default {
         // this.backgroundImage = 'url(' + require('../assets/Vaporwave-Right.jpg') + ')'
         // this.footerColor = '#5f6368'
         // this.headerColor = '#5f6368'
-        this.bulbColor = '#000000'
+        // this.bulbColor = '#000000'
         // this.nightMode = false change automatically
+        this.bulbPng = '../assets/bulbOff.png'
       } else {
         // this.backgroundImage = null
         // this.footerColor = '#FFFFFF'
         // this.headerColor = '#FFFFFF'
-        this.bulbColor = '#FFB300'
+        // this.bulbColor = '#FFB300'
         // this.nightMode = true change automatically
+        this.bulbPng = '../assets/bulbOn.png'
       }
     },
     clickStar () {

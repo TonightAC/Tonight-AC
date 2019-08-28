@@ -4,6 +4,7 @@
     <div class="zoom">
       <p>我叫冉子硕</p>
       <p>aka大吉大利，今晚AC</p>
+      <p>Welcome, or welcome back!</p>
       <p>It's hard to say who I am</p>
       <p>A weirdo I suppose ：）</p>
     </div>
