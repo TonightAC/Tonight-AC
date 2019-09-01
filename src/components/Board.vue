@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-main class="el-main mobile" style="text-align: center">
-      <el-input :autosize="{ minRows: 4, maxRows: 10}" type="textarea" placeholder="想说什么" v-model="messageBody" maxlength="100" show-word-limit></el-input>
+      <el-input :autosize="{ minRows: 6, maxRows: 10}" type="textarea" placeholder="想说什么" v-model="messageBody" maxlength="220" show-word-limit></el-input>
       <el-input style="margin-top: 15px" v-model="messageHeader" placeholder="怎么称呼" maxlength="12" show-word-limit></el-input>
       <el-button style="width: 200px; margin: 15px" type="primary" @click="release">发布</el-button>
       <el-card style="height: 100%">

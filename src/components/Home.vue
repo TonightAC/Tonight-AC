@@ -97,7 +97,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    background-image: url('../assets/background.png');
+    /*background-image: url('../assets/background.png');*/
     /*background-color: #E9EEF3;*/
     color: #333;
     text-align: center;
