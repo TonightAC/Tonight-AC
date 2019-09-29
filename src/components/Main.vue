@@ -58,7 +58,7 @@
         </el-row>
       </div>
     </el-header>
-    <el-container>
+    <el-container class="el-container">
       <home v-show="blockChoice === 'home'" style="margin-top: 60px; z-index: 1; position: relative"></home>
       <experience v-show="blockChoice === 'experience'" style="margin-top: 60px; z-index: 1; position: relative"></experience>
       <board v-show="blockChoice === 'board'" style="margin-top: 60px; z-index: 1; position: relative"></board>
@@ -250,6 +250,10 @@ export default {
 </script>
 
 <style scoped>
+  .el-container {
+    background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+  }
   .el-header {
     /*background-color: #FFFFFF;*/
     color: #333;
