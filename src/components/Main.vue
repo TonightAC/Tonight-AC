@@ -5,14 +5,11 @@
         <el-row>
           <el-col :span="6"><div style="margin-top: 10px">
             <el-dropdown trigger="click" class="mobile" style="margin-top: 15px; margin-left: 5px">
-<!--              <el-image style="font-size: 16px; margin-top: -4px; margin-left: -8px; width: 22px; height: 22px;" src="../assets/bulbOn.png" fit="fill"/>-->
               <img style="font-size: 16px; margin-top: -4px; margin-left: -8px; width: 22px; height: 22px;" src="../assets/bulbOn.png"  alt="Bulb"/>
-<!--              <i class="el-icon-s-opportunity" style="font-size: 16px; margin-top: -2px" :style="{ color: bulbColor }"></i>-->
               <el-dropdown-menu slot="dropdown" style="margin-top: 21px">
                 <el-dropdown-item icon="el-icon-house" @click.native="switchHome">主页</el-dropdown-item>
                 <el-dropdown-item icon="el-icon-takeaway-box" @click.native="switchExperience" divided>个人经历</el-dropdown-item>
                 <el-dropdown-item icon="el-icon-chat-line-square" @click.native="switchBoard" divided>留言板</el-dropdown-item>
-                <el-dropdown-item icon="el-icon-sunrise" @click.native="switchAlbum" divided>相册</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
           </div></el-col>
@@ -44,7 +41,6 @@
               <el-menu-item index="home" @click="switchHome">主页</el-menu-item>
               <el-menu-item index="experience" @click="switchExperience">个人经历</el-menu-item>
               <el-menu-item index="board" @click="switchBoard">留言板</el-menu-item>
-              <el-menu-item index="album" @click="switchAlbum">相册</el-menu-item>
             </el-menu>
           </div></el-col>
           <el-col :span="6"><div style="text-align: right; margin-top: 10px;">
@@ -62,7 +58,6 @@
       <home v-show="blockChoice === 'home'" style="margin-top: 60px; z-index: 1; position: relative"></home>
       <experience v-show="blockChoice === 'experience'" style="margin-top: 60px; z-index: 1; position: relative"></experience>
       <board v-show="blockChoice === 'board'" style="margin-top: 60px; z-index: 1; position: relative"></board>
-      <album v-show="blockChoice === 'album'" style="margin-top: 60px; z-index: 1; position: relative"></album>
       <el-footer class="el-footer" v-if="footerShow" :style="{ backgroundColor: footerColor }">
         <div class="pc">
           <el-row>
@@ -75,8 +70,8 @@
               <div style="text-align: center; margin-top: 20px">
                 <el-link href="https://www.zhihu.com/people/zhi-shang-gan-ren/activities" type="primary" :underline="false" target="_blank">我的知乎</el-link>
                 <el-link href="https://blog.csdn.net/lalala_HFUT" style="margin: 0 15px;" type="primary" :underline="false" target="_blank">我的博客</el-link>
-              <el-tooltip class="item" effect="dark" content="github is on build" placement="top">
-                <el-link href="https://github.com/suresursus" type="primary" :underline="false" target="_blank" disabled><del>我的github</del></el-link>
+              <el-tooltip class="item" effect="dark" content="GitHub is on build" placement="top">
+                <el-link href="https://github.com/suresursus" type="primary" :underline="false" target="_blank" disabled><del>我的GitHub</del></el-link>
               </el-tooltip>
             </div>
             </el-col>
@@ -100,8 +95,8 @@
           <el-divider direction="vertical"></el-divider>
           <el-link href="https://blog.csdn.net/lalala_HFUT" type="primary" :underline="false" target="_blank">我的博客</el-link>
           <el-divider direction="vertical"></el-divider>
-          <el-tooltip class="item" effect="dark" content="github is on build" placement="top">
-            <el-link href="https://github.com/suresursus" type="primary" :underline="false" target="_blank" disabled><del>我的github</del></el-link>
+          <el-tooltip class="item" effect="dark" content="GitHub is on build" placement="top">
+            <el-link href="https://github.com/suresursus" type="primary" :underline="false" target="_blank" disabled><del>我的GitHub</del></el-link>
           </el-tooltip>
         </div>
       </el-footer>
@@ -113,7 +108,6 @@
 import Home from '@/components/Home'
 import Experience from '@/components/Experience'
 import Board from '@/components/Board'
-import Album from '@/components/Album'
 import { Toast } from 'mint-ui'
 export default {
   name: 'Main',
@@ -224,33 +218,26 @@ export default {
     switchHome () {
       this.defaultActive = 'home'
       this.blockChoice = 'home'
-      this.footerShow = true
+      // this.footerShow = true
       this.experienceShow = false
     },
     switchExperience () {
       this.defaultActive = 'experience'
       this.blockChoice = 'experience'
-      this.footerShow = false
+      // this.footerShow = false
       this.experienceShow = true
     },
     switchBoard () {
       this.defaultActive = 'board'
       this.blockChoice = 'board'
-      this.footerShow = false
-      this.experienceShow = false
-    },
-    switchAlbum () {
-      this.defaultActive = 'album'
-      this.blockChoice = 'album'
-      this.footerShow = false
+      // this.footerShow = false
       this.experienceShow = false
     }
   },
   components: {
     Home,
     Experience,
-    Board,
-    Album
+    Board
   }
 }
 </script>
