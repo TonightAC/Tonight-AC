@@ -64,8 +64,36 @@
       <board v-show="blockChoice === 'board'" style="margin-top: 60px; z-index: 1; position: relative"></board>
       <album v-show="blockChoice === 'album'" style="margin-top: 60px; z-index: 1; position: relative"></album>
       <el-footer class="el-footer" v-if="footerShow" :style="{ backgroundColor: footerColor }">
-        <div class="pc" style="position: absolute; left: 0; margin-left: 20px; margin-top: 10px">
-          <span style="display: block">TONIGHT</span><span style="display: block; font-family: 'American Typewriter'; color: #F06292">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AC</span>
+        <div class="pc">
+          <el-row>
+            <el-col :span="8">
+              <div style="margin-top: 10px">
+              <span style="display: block">TONIGHT</span><span style="display: block; font-family: 'American Typewriter'; color: #F06292">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AC</span>
+            </div>
+            </el-col>
+            <el-col :span="8">
+              <div style="text-align: center; margin-top: 20px">
+                <el-link href="https://www.zhihu.com/people/zhi-shang-gan-ren/activities" type="primary" :underline="false" target="_blank">我的知乎</el-link>
+                <el-link href="https://blog.csdn.net/lalala_HFUT" style="margin: 0 15px;" type="primary" :underline="false" target="_blank">我的博客</el-link>
+              <el-tooltip class="item" effect="dark" content="github is on build" placement="top">
+                <el-link href="https://github.com/suresursus" type="primary" :underline="false" target="_blank" disabled><del>我的github</del></el-link>
+              </el-tooltip>
+            </div>
+            </el-col>
+            <el-col :span="8">
+              <div style="float: right; margin-top: 20px">
+              <el-tooltip content="182-9791-7232" placement="top-end" effect="light">
+                <i class="el-icon-phone-outline" style="margin-right: 25px; color: white"></i>
+              </el-tooltip>
+              <el-tooltip content="suresursus@outlook.com" placement="top-end" effect="light">
+                <i class="el-icon-message" style="margin-right: 25px; color: white"></i>
+              </el-tooltip>
+              <el-tooltip content="安徽省合肥市合肥工业大学翡翠湖校区" placement="top-end" effect="light">
+                <i class="el-icon-location-outline" style="color: white"></i>
+              </el-tooltip>
+            </div>
+            </el-col>
+          </el-row>
         </div>
         <div class="mobile" style="text-align: center; margin-top: 20px;">
           <el-link href="https://www.zhihu.com/people/zhi-shang-gan-ren/activities" type="primary" :underline="false" target="_blank">我的知乎</el-link>
@@ -75,29 +103,6 @@
           <el-tooltip class="item" effect="dark" content="github is on build" placement="top">
             <el-link href="https://github.com/suresursus" type="primary" :underline="false" target="_blank" disabled><del>我的github</del></el-link>
           </el-tooltip>
-        </div>
-        <div class="pc" style="display: flex; flex-direction: row; line-height: 0;">
-          <div style="flex: 1"></div>
-          <div style="flex: 1; margin-top: 25px; text-align: center">
-            <el-link href="https://www.zhihu.com/people/zhi-shang-gan-ren/activities" type="primary" :underline="false" target="_blank">我的知乎</el-link>
-            <el-divider direction="vertical"></el-divider>
-            <el-link href="https://blog.csdn.net/lalala_HFUT" type="primary" :underline="false" target="_blank">我的博客</el-link>
-            <el-divider direction="vertical"></el-divider>
-            <el-tooltip class="item" effect="dark" content="github is on build" placement="top">
-              <el-link href="https://github.com/suresursus" type="primary" :underline="false" target="_blank" disabled><del>我的github</del></el-link>
-            </el-tooltip>
-          </div>
-          <div style="flex: 1; text-align: right; margin-top: 25px">
-            <el-tooltip content="182-9791-7232" placement="top-end" effect="light">
-              <i class="el-icon-phone-outline" style="margin-right: 25px; color: black"></i>
-            </el-tooltip>
-            <el-tooltip content="suresursus@outlook.com" placement="top-end" effect="light">
-              <i class="el-icon-message" style="margin-right: 25px; color: black"></i>
-            </el-tooltip>
-            <el-tooltip content="安徽省合肥市合肥工业大学翡翠湖校区" placement="top-end" effect="light">
-              <i class="el-icon-location-outline" style="color: black"></i>
-            </el-tooltip>
-          </div>
         </div>
       </el-footer>
     </el-container>
@@ -169,13 +174,14 @@ export default {
         this.starIcon = 'el-icon-star-off'
         if (screen.width < 1080) {
           Toast({
-            message: 'Okay~',
+            message: 'Fine',
             position: 'bottom',
             duration: 2000
           })
         } else {
           this.$message({
-            message: 'Okay~',
+            dangerouslyUseHTMLString: true,
+            message: '<strong>Fine</strong>',
             type: 'warning'
           })
         }
@@ -195,13 +201,13 @@ export default {
         this.axios.get('/star/setStar').then(res => {
           if (screen.width < 1080) {
             Toast({
-              message: '多谢点赞_(:зゝ∠)_',
+              message: '不客气',
               position: 'bottom',
               duration: 2000
             })
           } else {
             this.$message({
-              message: '多谢点赞_(:зゝ∠)_',
+              message: '不客气',
               type: 'success'
             })
           }
@@ -253,6 +259,8 @@ export default {
   .el-container {
     background-image: url("../assets/background.png");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
   .el-header {
     /*background-color: #FFFFFF;*/
