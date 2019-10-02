@@ -41,6 +41,7 @@
               <el-menu-item index="home" @click="switchHome">主页</el-menu-item>
               <el-menu-item index="experience" @click="switchExperience">个人经历</el-menu-item>
               <el-menu-item index="board" @click="switchBoard">留言板</el-menu-item>
+              <el-menu-item @click="switchYard">笑场</el-menu-item>
             </el-menu>
           </div></el-col>
           <el-col :span="6"><div style="text-align: right; margin-top: 10px;">
@@ -232,6 +233,9 @@ export default {
       this.blockChoice = 'board'
       // this.footerShow = false
       this.experienceShow = false
+    },
+    switchYard () {
+      this.$router.push({path: '/yard'})
     }
   },
   components: {
