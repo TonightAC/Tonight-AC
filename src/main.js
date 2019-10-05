@@ -15,7 +15,7 @@ Vue.use(ElementUI)
 Vue.use(Mint)
 Vue.use(VueAxios, axios)
 
-axios.defaults.baseURL = 'http://47.102.124.250:1912'
+axios.defaults.baseURL = 'http://47.102.124.250:80'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
