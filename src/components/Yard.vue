@@ -87,9 +87,9 @@ export default {
 .shadow {
   animation: shrink 3s ease-out infinite;
   transform-origin: center center;
-  ellipse {
-    transform-origin: center center;
-  }
+}
+ellipse {
+  transform-origin: center center;
 }
 
 @keyframes shrink {
