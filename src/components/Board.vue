@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import { Toast } from 'mint-ui'
 export default {
   name: 'Board',
   data () {
@@ -59,10 +60,18 @@ export default {
       if (this.messageHeader !== '' && this.messageBody !== '') {
         this.axios.get('/message/newMessage?messageHeader=' + this.messageHeader + '&messageBody=' + this.messageBody).then(res => {
           if (res.data === 'success') {
-            this.$message({
-              message: '发布成功',
-              type: 'success'
-            })
+            if (screen.width < 1080) {
+              Toast({
+                message: '发布成功',
+                position: 'bottom',
+                duration: 2000
+              })
+            } else {
+              this.$message({
+                message: '发布成功',
+                type: 'success'
+              })
+            }
             // this.refresh()
             this.count++
             this.data.splice(0, 0, {messageHeader: this.messageHeader, messageBody: this.messageBody})

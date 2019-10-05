@@ -5,11 +5,13 @@
         <el-row>
           <el-col :span="6"><div style="margin-top: 10px">
             <el-dropdown trigger="click" class="mobile" style="margin-top: 15px; margin-left: 5px">
-              <img style="font-size: 16px; margin-top: -4px; margin-left: -8px; width: 22px; height: 22px;" src="../assets/bulbOn.png"  alt="Bulb"/>
+              <img style="font-size: 16px; margin-top: -8px; margin-left: -8px; width: 30px; height: 30px;" src="../assets/panda.png"  alt="Panda"/>
+              <!--              <img style="font-size: 16px; margin-top: -4px; margin-left: -8px; width: 22px; height: 22px;" src="../assets/bulbOn.png"  alt="Bulb"/>-->
               <el-dropdown-menu slot="dropdown" style="margin-top: 21px">
                 <el-dropdown-item icon="el-icon-house" @click.native="switchHome">主页</el-dropdown-item>
                 <el-dropdown-item icon="el-icon-takeaway-box" @click.native="switchExperience" divided>个人经历</el-dropdown-item>
                 <el-dropdown-item icon="el-icon-chat-line-square" @click.native="switchBoard" divided>留言板</el-dropdown-item>
+                <el-dropdown-item icon="el-icon-toilet-paper" @click.native="switchYard" divided>笑场</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
           </div></el-col>
@@ -64,8 +66,9 @@
           <el-row>
             <el-col :span="8">
               <div style="margin-top: 10px">
-              <span style="display: block">TONIGHT</span><span style="display: block; font-family: 'American Typewriter'; color: #F06292">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AC</span>
-            </div>
+                <div style="display: inline-block"><span style="display: block">TONIGHT</span><span style="display: block; font-family: 'American Typewriter'; color: #F06292">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AC</span></div>
+                <img src="../assets/panda.png" style="display: inline-block; width: 30px; height: 30px">
+              </div>
             </el-col>
             <el-col :span="8">
               <div style="text-align: center; margin-top: 20px">
@@ -146,9 +149,7 @@ export default {
   methods: {
     nightSwitch () {
       if (this.nightMode === true) {
-        // this.backgroundImage = 'url(' + require('../assets/Vaporwave-Right.jpg') + ')'
-        // this.footerColor = '#5f6368'
-        // this.headerColor = '#5f6368'
+        this.headerColor = '#5f6368'
         // this.bulbColor = '#000000'
         // this.nightMode = false change automatically
         this.bulbPng = '../assets/bulbOff.png'
