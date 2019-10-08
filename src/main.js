@@ -10,7 +10,10 @@ import './common/font/font.css'
 import 'mint-ui/lib/style.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import 'fullpage.js/vendors/scrolloverflow' // Optional. When using scrollOverflow:true
+import VueFullPage from 'vue-fullpage.js'
 
+Vue.use(VueFullPage)
 Vue.use(ElementUI)
 Vue.use(Mint)
 Vue.use(VueAxios, axios)

@@ -92,8 +92,6 @@
         <div style="height: 10px"></div>
       </el-card>
     </el-main>
-<!--      <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>-->
-<!--    </el-scrollbar>-->
     <el-main class="el-main pc">
       <el-row class="el-row" :gutter="10">
         <el-col class="el-col" :span="4"><el-card class="grid-content bg-purple" shadow="hover">教育经历</el-card></el-col>

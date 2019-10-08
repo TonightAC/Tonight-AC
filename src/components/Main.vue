@@ -6,7 +6,6 @@
           <el-col :span="6"><div style="margin-top: 10px">
             <el-dropdown trigger="click" class="mobile" style="margin-top: 15px; margin-left: 5px">
               <img style="font-size: 16px; margin-top: -8px; margin-left: -8px; width: 30px; height: 30px;" src="../assets/panda.png"  alt="Panda"/>
-              <!--              <img style="font-size: 16px; margin-top: -4px; margin-left: -8px; width: 22px; height: 22px;" src="../assets/bulbOn.png"  alt="Bulb"/>-->
               <el-dropdown-menu slot="dropdown" style="margin-top: 21px">
                 <el-dropdown-item icon="el-icon-house" @click.native="switchHome">主页</el-dropdown-item>
                 <el-dropdown-item icon="el-icon-takeaway-box" @click.native="switchExperience" divided>个人经历</el-dropdown-item>
@@ -29,7 +28,6 @@
             </div>
             <div v-else style="text-align: right; margin-top: 10px;">
             <el-badge :value="1" class="item" :hidden="badgeHidden">
-              <el-switch v-model="nightMode" @change="nightSwitch" active-text="夜间模式"></el-switch>
               <el-divider  direction="vertical"></el-divider>
               <el-button style="width: 40px; padding-left: 0; padding-right: 0" type="primary" :icon="starIcon" @click="clickStar" :disabled="starDisabled"></el-button>
             </el-badge>
@@ -47,8 +45,6 @@
             </el-menu>
           </div></el-col>
           <el-col :span="6"><div style="text-align: right; margin-top: 10px;">
-              <el-switch v-model="nightMode" @change="nightSwitch" active-text="夜间模式">
-              </el-switch>
               <el-divider  direction="vertical"></el-divider>
               <el-badge :value="1" class="item" :hidden="badgeHidden">
                 <el-button style="width: 80px" type="primary" :icon="starIcon" @click="clickStar" :disabled="starDisabled">{{ star }}</el-button>
@@ -124,14 +120,12 @@ export default {
       footerShow: true,
       experienceShow: false,
       bulbPng: 'url(' + require('../assets/bulbOn.png') + ')',
-      // bulbColor: '#FFB300',
       headerColor: '#FFFFFF',
       footerColor: null,
       starIcon: 'el-icon-star-off',
       defaultActive: 'home',
       blockChoice: 'home',
       contain: ''
-      // backgroundImage: 'url(' + require('../assets/background.jpg') + ')'
     }
   },
   created () {
@@ -147,21 +141,6 @@ export default {
     })
   },
   methods: {
-    nightSwitch () {
-      if (this.nightMode === true) {
-        this.headerColor = '#5f6368'
-        // this.bulbColor = '#000000'
-        // this.nightMode = false change automatically
-        this.bulbPng = '../assets/bulbOff.png'
-      } else {
-        // this.backgroundImage = null
-        // this.footerColor = '#FFFFFF'
-        // this.headerColor = '#FFFFFF'
-        // this.bulbColor = '#FFB300'
-        // this.nightMode = true change automatically
-        this.bulbPng = '../assets/bulbOn.png'
-      }
-    },
     clickStar () {
       this.starDisabled = true
       if (this.badgeHidden === true) {

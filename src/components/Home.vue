@@ -64,7 +64,6 @@ export default {
     height: 50px;
     width: 50px;
     animation: rotate 5s ease-in-out 5s infinite alternate;
-    /*transition: all 1s;*/
   }
   @keyframes rotate {
     0%, 75% {
@@ -74,15 +73,10 @@ export default {
       transform: rotate(0deg);
     }
   }
-  /*.el-avatar:hover {*/
-  /*   transform: rotate(-720deg);*/
-  /* }*/
   .zoom {
-    /*margin-top: 100px;*/
     animation: goup 1s ease 0.2s 1 forwards;
     transform: translate3d(0, 20px, 0);
     color: rgba(0, 0, 0, 0);
-    /*transition: all 1s;*/
   }
   @keyframes goup {
     to {
@@ -90,17 +84,11 @@ export default {
       color: rgba(0, 0, 0, 255);
     }
   }
-  /*.zoom:hover {*/
-  /*  transform: translate3d(0, 0, 0);*/
-  /*}*/
   .el-main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    /*background-image: url('../assets/background.png');*/
-    /*background-color: #E9EEF3;*/
     color: #333;
     text-align: center;
-    /*line-height: 60px;*/
   }
 </style>
