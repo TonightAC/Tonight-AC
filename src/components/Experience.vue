@@ -105,13 +105,13 @@
           <div>
             <span>大一学年获得三好学生称号，并获得三等奖学金，专业排名21/133。</span>
             <el-divider></el-divider>
-            <span>大二学年......</span>
+            <span>大二学年获得优秀干部称号，并获得三等奖学金，专业排名29/135。</span>
             <el-divider></el-divider>
-            <span>大三学年......</span>
+            <span>大三学年成绩过于优异，破格让我再读一年大二。</span>
             <el-divider></el-divider>
-            <span>大四学年......</span>
+            <span>大四学年，还没毕业被马化腾和马云，哎编不下去了。</span>
             <el-divider></el-divider>
-            <span>整体来说总成绩不够强势，但专业课成绩优势明显，基础扎实，自学能力强，更加重视实践能力的培养。</span>
+            <span>整体来说总成绩不够强势（确实），但专业课成绩优势明显（从上面也看不出来）。基础扎实，自学能力强，更加重视实践能力的培养。</span>
           </div>
         </el-card></el-col>
       </el-row>
@@ -140,15 +140,13 @@
       <el-row class="el-row" :gutter="10">
         <el-col class="el-col" :span="4"><el-card class="grid-content bg-purple" shadow="hover">竞赛经历</el-card></el-col>
         <el-col class="el-col" :span="20"><el-card class="grid-content bg-purple-light" shadow="hover">
-      <span>
-        <el-link href="http://rjxy.hfut.edu.cn/2018/1030/c7228a186407/page.htm" type="primary" :underline="false" target="_blank">2018年CCSP铜奖</el-link>
-        <el-link href="http://rjxy.hfut.edu.cn/2019/0523/c7228a213772/page.htm" type="primary" :underline="false" target="_blank">2019年CCSP分赛区铜奖</el-link>
-        <el-link href="https://csp.ccf.org.cn/csp/score/score_pdf.action?id=00000000000000000000201809202293" type="primary" :underline="false" target="_blank">第十五次CSP认证300分（前2.47%）</el-link>
-      </span>
+          <span><el-link href="http://rjxy.hfut.edu.cn/2018/1030/c7228a186407/page.htm" type="primary" :underline="false" target="_blank">2018年大学生计算机系统与程序设计竞赛（CCSP）铜奖</el-link></span>
           <el-divider></el-divider>
-          <span>
-        <el-link href="" type="primary" :underline="false" target="_blank" disabled>2019年安徽省程序设计竞赛二等奖</el-link>
-      </span>
+          <span><el-link href="http://rjxy.hfut.edu.cn/2019/0523/c7228a213772/page.htm" type="primary" :underline="false" target="_blank">2019年大学生计算机系统与程序设计竞赛（CCSP）分赛区铜奖</el-link></span>
+          <el-divider></el-divider>
+          <span><el-link href="https://csp.ccf.org.cn/csp/score/score_pdf.action?id=00000000000000000000201809202293" type="primary" :underline="false" target="_blank">第十五次计算机软件能力认证（CSP）认证300分（前2.47%）</el-link></span>
+          <el-divider></el-divider>
+          <span><el-link href="" type="primary" :underline="false" target="_blank" disabled>2019年安徽省程序设计竞赛二等奖</el-link></span>
         </el-card></el-col>
       </el-row>
       <el-row class="el-row" :gutter="10">
@@ -158,20 +156,20 @@
           <el-divider content-position="right">算法能力</el-divider>
           <span>对前端知识有浅显的了解，会开发简单的Vue和Android应用。</span>
           <el-divider content-position="right">前端能力</el-divider>
-          <span>熟悉Java语言，了解JVM，会使用SSM框架，会使用MySQL数据库，会使用redis和nginx，有志于Java后端开发。</span>
+          <span>熟悉Java语言，了解JVM，会使用SSM框架，会使用MySQL数据库，会使用redis和nginx。</span>
           <el-divider content-position="right">后端能力</el-divider>
           <span>会使用git，代码编写规范，了解设计模式，吃苦耐劳，沟通能力强，服从上级领导。</span>
           <el-divider content-position="right">团队协作能力</el-divider>
         </el-card></el-col>
       </el-row>
       <el-row class="el-row" :gutter="10">
-        <el-col class="el-col" :span="4"><el-card class="grid-content bg-purple" shadow="hover">兴趣爱好</el-card></el-col>
+        <el-col class="el-col" :span="4"><el-card class="grid-content bg-purple" shadow="hover">业余生活</el-card></el-col>
         <el-col class="el-col" :span="20"><el-card class="grid-content bg-purple-light" shadow="hover">
-        </el-card></el-col>
-      </el-row>
-      <el-row class="el-row" :gutter="10">
-        <el-col class="el-col" :span="4"><el-card class="grid-content bg-purple" shadow="hover">精品博文</el-card></el-col>
-        <el-col class="el-col" :span="20"><el-card class="grid-content bg-purple-light" shadow="hover">
+          <span>抽烟、喝酒、打架、早恋、烫头、染黄毛、飙车、赌博、蹦迪、去酒吧。</span>
+          <el-divider></el-divider>
+          <span>不可能，</span>
+          <el-divider></el-divider>
+          <span>我一样也不沾。</span>
         </el-card></el-col>
       </el-row>
     </el-main>
