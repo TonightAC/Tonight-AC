@@ -254,7 +254,7 @@ export default {
 
   .el-menu {
     background: #FFFFFF;
-    height: 0;
+    border-width: 0;
   }
 
   .el-menu--horizontal>.el-menu-item:hover {
