@@ -1,17 +1,19 @@
 <template>
   <el-main class="el-main">
-    <el-avatar :src="avatarUrl" class="el-avatar"></el-avatar>
-    <div class="zoom">
-      <p>我叫冉子硕</p>
-      <p>aka大吉大利，今晚AC</p>
-      <p>Welcome, or welcome back!</p>
-      <p>It's hard to say who I am</p>
-      <p>A weirdo I suppose ：）</p>
-    </div>
-    <div style="margin-top: 60px">
-      <span style="font-size: 14px; color: white">给我的主页打分：</span>
-      <el-rate  text-color="#FFFFFF" @change="rate" style="margin-top: 10px; margin-bottom: 10px" v-model="value" show-text :colors="['#99A9BF', '#F7BA2A', '#FF9900']"></el-rate>
-      <span v-if="rated" style="color: white;font-size: 14px" >已有{{ ratedPeople }}人打分，平均分：{{ratedAverage}}</span>
+    <div style="position: absolute; left: 50%; top: 50%; transform: translateY(-50%) translateX(-50%)">
+      <el-avatar :src="avatarUrl" class="el-avatar"></el-avatar>
+      <div class="zoom">
+        <p>我叫冉子硕</p>
+        <p>aka大吉大利，今晚AC</p>
+        <p>Welcome, or welcome back!</p>
+        <p>It's hard to say who I am</p>
+        <p>A weirdo I suppose ：）</p>
+      </div>
+      <div style="margin-top: 60px">
+        <span style="font-size: 14px; color: white">给我的主页打分：</span>
+        <el-rate  text-color="#FFFFFF" @change="rate" style="margin-top: 10px; margin-bottom: 10px" v-model="value" show-text :colors="['#99A9BF', '#F7BA2A', '#FF9900']"></el-rate>
+        <span v-if="rated" style="color: white;font-size: 14px" >已有{{ ratedPeople }}人打分，平均分：{{ratedAverage}}</span>
+      </div>
     </div>
   </el-main>
 </template>

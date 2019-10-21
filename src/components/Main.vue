@@ -15,6 +15,9 @@
             </el-dropdown>
           </div></el-col>
           <el-col :span="18">
+            <div class="clock" style="right: 50px">
+              <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:120px;height:40px;" src="https://www.clocklink.com/html5embed.php?clock=043&timezone=CCT&color=green&size=120&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=green"></iframe>
+            </div>
             <div v-if="experienceShow" style="text-align: right; margin-top: 25px">
               <el-tooltip content="182-9791-7232" placement="bottom-end" effect="light">
                 <i class="el-icon-phone-outline" style="margin-right: 25px"></i>
@@ -44,12 +47,17 @@
               <el-menu-item @click="switchYard">笑场</el-menu-item>
             </el-menu>
           </div></el-col>
-          <el-col :span="6"><div style="text-align: right; margin-top: 10px;">
+          <el-col :span="6">
+            <div class="clock">
+              <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:120px;height:40px;" src="https://www.clocklink.com/html5embed.php?clock=043&timezone=CCT&color=green&size=120&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=green"></iframe>
+            </div>
+            <div style="position: absolute; top: 10px; right: 10px">
               <el-divider  direction="vertical"></el-divider>
               <el-badge :value="1" class="item" :hidden="badgeHidden">
                 <el-button style="width: 80px" type="primary" :icon="starIcon" @click="clickStar" :disabled="starDisabled">{{ star }}</el-button>
               </el-badge>
-            </div></el-col>
+            </div>
+          </el-col>
         </el-row>
       </div>
     </el-header>
@@ -259,5 +267,13 @@ export default {
 
   .el-menu--horizontal>.el-menu-item:hover {
     border-bottom: 2px solid #409EFF!important;
+  }
+  .clock {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+  }
+  .clock:hover {
+    display: none;
   }
  </style>

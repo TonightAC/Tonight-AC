@@ -1,77 +1,33 @@
 <template>
   <div>
     <i style="z-index: 2; position: absolute; top: 25px; right: 25px; font-size: 30px; background-color: black; color: white" @click="backMain" class="back el-icon-close"></i>
-    <full-page ref="fullpage" :options="options" id="fullpage" :style="{ backgroundColor: backgroundColor }">
+    <full-page ref="fullpage" :options="options" id="fullpage">
       <div class="section">
-        <div class="main">
-          <div class="weather">
-            <i class="el-icon-sunny sunny" v-if="daytime"></i>
-            <i class="el-icon-moon night" v-else></i>
-          </div>
-        </div>
+        <h1 style="color: black">天真热，动物们聚在一起聊天。</h1>
       </div>
       <div class="section">
-        <h1 style="color: black">2</h1>
+        <h1 style="color: black">松鼠说：“我的尾巴是世界上最热的东西，闷得我睡不找觉。”</h1>
       </div>
       <div class="section">
-        <h1 style="color: black">3</h1>
+        <h1 style="color: black">熊说：“不，我的毛才热呢，热得我都喘不过气来。”</h1>
       </div>
       <div class="section">
-        <h1 style="color: black"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 566.93 567.32">
-          <ellipse id="shadow" cx="271.09" cy="401.98" rx="124.49" ry="15" opacity=".07" fill="#231f20"/>
-          <g id="eye-r">
-            <path class="cls-4" d="M402.64,227.49a18.24,18.24,0,0,1,20.59,15.56h0a18.28,18.28,0,0,1-15.52,20.61h0a18.25,18.25,0,0,1-20.59-15.55h0a18.26,18.26,0,0,1,15.52-20.62Z" transform="translate(0 .39)"/>
-            <g id="pupil-r">
-              <path class="cls-5" d="M403.68,226.82a10.67,10.67,0,1,1-9.1,12.07A10.57,10.57,0,0,1,403.68,226.82Z" transform="translate(0 .39)"/>
-              <path class="cls-4" d="M398.61 238a4 4 0 111.09 7.85 4 4 0 01-4.49-3.33A4.06 4.06 0 01398.61 238zM411.46 231.58a3.24 3.24 0 013.59 2.71 3.18 3.18 0 01-2.73 3.56 3.12 3.12 0 01-3.54-2.68A3.18 3.18 0 01411.46 231.58z" transform="translate(0 .39)"/>
-            </g>
-          </g>
-          <path id="foot-front-dk" d="M349,353.75s10.13,24.9,6.23,40.48c0,0-10.9,9.34-21-1.55S349,353.75,349,353.75Z" transform="translate(0 .39)" fill="#7e8e99"/>
-          <path class="cls-7" d="M415.17,254.1s6.22-4.67,11.67-21,7-26.47,14-21,9.34,34.25,3.11,45.15S415.17,254.1,415.17,254.1Z" transform="translate(0 .39)"/>
-          <path id="foot-back-dk" d="M213.49,363.7s3.2,23.67,0,31.3c0,0-16.78.78-25.57-7.63s4.8-32.06,4.8-32.06Z" transform="translate(0 .39)" fill="#7e8e98"/>
-          <path id="foot-front-lt" class="cls-9" d="M306.4,400.17s2.82-2-3-20.5,0-20,0-20,15.71-11.34,28.73-5.3c0,0,10.21,10.33,11.42,20.28s.79,8,1,23.26C344.6,397.94,320.73,408.82,306.4,400.17Z" transform="translate(0 .39)"/>
-          <path class="cls-9" d="M487.57,201.93s-6.23-1.55-10.9,15.58-3.11,38.14-29.58,36.59-33.48-1.56-46.72-24.91-35-24.14-63.05-20.25-59.17,7.79-79.41-2.33-71.62-14-105.1,11.68-43.59,68.5-34.25,94.2a143.29,143.29,0,0,0,10.11,21.42h0a22.3,22.3,0,0,0,1.22,2.12c4.49,7,22.48,29.49,72.59,35.88a1.55,1.55,0,0,1,.39.06A44.11,44.11,0,0,1,208,374.5c5.82,2.93,16.49,7.47,35.11,8.83,31.92,2.34,61.5-3.89,61.5-3.89l43.13-13.5c3.7-1.37,8.12-3.44,9.81-6,0,0,14.08,27.61,67,24.92,45.92-2.34,72.76-23.29,83.29-84.86C517.93,240.86,496.91,200.38,487.57,201.93Z" transform="translate(0 .39)"/>
-          <path id="foot-back-lt" class="cls-9" d="M202.47,350.49l-.72,45.07S187.1,409.1,160.59,402c0,0-1.54-25.25-19.68-48.55,0,0-16-20.8-7.95-25.54s34.19-18.42,50.09-9.91S201.37,326.91,202.47,350.49Z" transform="translate(0 .39)"/>
-          <path class="cls-7" d="M510.36,275.59c1.71-45.56-14.8-75-22.79-73.66,0,0-6.23-1.55-10.9,15.58-4.1,15-3.41,33-21,36.18C462.75,265.2,480,285.13,510.36,275.59Z" transform="translate(0 .39)"/>
-          <path d="M488.15,205.7a1.7,1.7,0,0,0-.55,0c5.54,2.18,12.82,21.61,9.74,49.49-.23,2.12,4.6,5.74,7.6,4.8C506.2,226.4,494,204.72,488.15,205.7Z" transform="translate(0 .39)" fill="#dde6ed"/>
-          <path id="tail" class="cls-9" d="M125.92,251.42S102.33,278.65,99.38,318c0,0,16.21-48.41,42.75-60.51S125.92,251.42,125.92,251.42Z" transform="translate(0 .39)"/>
-          <g id="ear-r">
-            <path class="cls-9" d="M370,212.84s5.45-35.82,17.13-38.93,18.68,23.36-7,40.48Z" transform="translate(0 .39)"/>
-            <path class="cls-11" d="M376.24,212.84s4.67-14.8,6.23-21.8,7.79-7.78,8.56-3.11S382.47,210.5,376.24,212.84Z" transform="translate(0 .39)"/>
-          </g>
-          <g id="eye-l">
-            <path class="cls-4" d="M360.18,237.17a18.23,18.23,0,0,1,20.58,15.55h0a18.26,18.26,0,0,1-15.51,20.62h0a18.26,18.26,0,0,1-20.59-15.55h0a18.24,18.24,0,0,1,15.52-20.62Z" transform="translate(0 .39)"/>
-            <g id="pupil-l">
-              <path class="cls-5" d="M357,240.83a10.68,10.68,0,1,1-9.1,12.08A10.57,10.57,0,0,1,357,240.83Z" transform="translate(0 .39)"/>
-              <path class="cls-4" d="M351.89 252a4 4 0 014.48 3.4 4 4 0 01-7.87 1.12A4.05 4.05 0 01351.89 252zM364.75 245.6a3.23 3.23 0 013.59 2.71 3.17 3.17 0 01-2.73 3.55 3.12 3.12 0 01-3.55-2.67A3.17 3.17 0 01364.75 245.6z" transform="translate(0 .39)"/>
-            </g>
-          </g>
-          <path class="cls-7" d="M159.6,213.63a77.05,77.05,0,0,0-6.79,4.66,96.54,96.54,0,0,0-23,25.26A10.81,10.81,0,0,0,131,244s10.89,3.9,18.67,3.9,6.24-2.34,8.57-3.9,7-10.11,7-20.23C165.27,219.17,162.56,215.88,159.6,213.63Zm10.34,27.23s-7.79,3.11-3.9,8.57,7.79,9.35,10.91,3.11S173.05,238.53,169.94,240.86ZM145.8,255.65s-8.56,3.9-3.11,9.35,13.24,4.67,14,.78S148.92,254.1,145.8,255.65Zm52.94-33.47s-11.68,1.56-12.45,8.57,7.78,14.78,13.24,8.55S205.75,222.18,198.74,222.18Zm116,3.89s-10.12,3.12-10.9,6.23-3.89,6.23-.77,8.56,17.12.78,17.12.78S321.75,224.52,314.74,226.07Zm-27.25,14s-9.34.78-9.34,6.23,1.56,7.79,5.45,8.57,8.56,0,9.34-3.12S292.94,238.53,287.49,240.08ZM270,210.82a23,23,0,0,0-.4,4.35c0,5.46.79,5.46,2.34,8.57a41.83,41.83,0,0,0,7,9.34c2.34,2.34,10.12.78,17.13-3.12,4.68-2.59,3.45-11.44,2.13-17C288.14,213.27,278.52,212.79,270,210.82Zm-24.76-8.69a8.51,8.51,0,0,0-2.1,7.59c1.55,7,3.11,10.12,6.22,10.12a12.49,12.49,0,0,0,8.57-3.89c1.61-1.61,2.84-5,3.46-7.81-1.18-.47-2.35-1-3.46-1.53A63.23,63.23,0,0,0,245.22,202.13Zm-17.87-2.85a128.64,128.64,0,0,0-36.94,2.33c-.21,5.65.91,14.09,9.12,15.12,12.44,1.56,17.9,1.56,21.79-.78C224.54,214,226.7,203,227.35,199.28Zm-2.91,25.24c-2.18.86-10.91,3.89-10.91,11.67s-3.11,10.9,3.12,14.79,13.23,7,17.9,3.12,10.9-9.34,10.9-14.8-3.11-13.23-3.11-13.23S228.33,223,224.44,224.52Z" transform="translate(0 .39)"/>
-          <path class="cheek cls-11" d="M371.57,292.25a14,14,0,1,1-14-14A14,14,0,0,1,371.57,292.25Z" transform="translate(0 .39)"/>
-          <g id="ear-l">
-            <path class="cls-9" d="M359.89,211.28s7.79-14.8,3.9-27.25-10.12-20.24-17.91-12.46,2.34,37.37,7,42S359.89,211.28,359.89,211.28Z" transform="translate(0 .39)"/>
-            <path class="cls-11" d="M356,210.5s5.45-24.13-1.56-28.8-3.89,6.23-3.11,10.89S352.11,210.5,356,210.5Z" transform="translate(0 .39)"/>
-          </g>
-          <path id="mouth" d="M380.94,340.17s.72,16,18.21,13.58" transform="translate(0 .39)" fill="none" stroke="#000" stroke-miterlimit="10"/>
-          <g id="fart">
-            <path class="cls-4" d="M68.91,242.15l28.47,13.76-28.47,17.6S31.24,258.83,68.91,242.15Z" transform="translate(0 .39)"/>
-            <circle class="cls-4" cx="64.69" cy="241.74" r="8.06"/>
-            <circle class="cls-4" cx="54.02" cy="245.57" r="6.87"/>
-            <circle class="cls-4" cx="61.59" cy="277.72" r="8.44"/>
-            <circle class="cls-4" cx="54.51" cy="270.2" r="6.38"/>
-            <circle class="cls-4" cx="52.17" cy="257.54" r="10.95"/>
-            <circle class="cls-4" cx="39.58" cy="243.55" r="3.45"/>
-            <circle class="cls-4" cx="45.04" cy="267.51" r="5.46"/>
-          </g>
-          <g id="front-eye-blink">
-            <path class="top cls-9" d="M349.7,265.74,377.54,244c-15-20-45.21,3.67-30,23.39Z" transform="translate(0 .39)"/>
-            <path class="bottom cls-9" d="M377.54,244l-30,23.39C362.6,286.91,392.22,263.69,377.54,244Z" transform="translate(0 .39)"/>
-          </g>
-          <g id="back-eye-blink">
-            <path class="top cls-9" d="M388.61,242.11,423.24,249c5.37-24.43-32.35-31.8-37.31-7.38Z" transform="translate(0 .39)"/>
-            <path class="bottom cls-9" d="M423.24,249l-37.31-7.38C381,265.71,418,272.92,423.24,249Z" transform="translate(0 .39)"/>
-          </g>
-        </svg></h1>
+        <h1 style="color: black">狗说：“不，地上的石头才热呢，把我的脚都烫伤了。”</h1>
+      </div>
+      <div class="section">
+        <h1 style="color: black">小麻雀在树上尖叫起来：“不，屋顶的烟囱才热呢，常常冒着烟，差点把我的羽毛给烫焦了。”</h1>
+      </div>
+      <div class="section">
+        <h1 style="color: black">狼从树丛中探出头来：“不，大火才热呢，会烧掉许多东西。”</h1>
+      </div>
+      <div class="section">
+        <h1 style="color: black">“呱呱呱”，河里的青蛙说：“嘿，你们说得都对，可是，你们又都说错了，世界上最热的东西就在你们的头顶上。”说完，青蛙“扑通”一声跳进了河里。</h1>
+      </div>
+      <div class="section">
+        <h1 style="color: black">动物们抬起头，感觉红通通、热乎乎的，眼睛也睁不开。</h1>
+      </div>
+      <div class="section">
+        <h1 style="color: black">哦，原来青蛙说的是太阳啊。</h1>
       </div>
     </full-page>
   </div>
@@ -83,26 +39,9 @@ export default {
   name: 'Yard',
   data () {
     return {
-      daytime: true,
-      backgroundColor: 'white',
-      colorIndex: 0,
-      colors: [
-        '#424242', '#004D40', '#00695C', '#00695C', '#009688', '#26C6DA',
-        '#69F0AE', '#B9F6CA', '#CCFF90', '#F4FF81', '#FFFF00', '#FFCCBC',
-        '#FF7043', '#EF6C00', '#FFECB3', '#FFF9C4', '#FBE9E7', '#E57373',
-        '#8E24AA', '#6A1B9A', '#9575CD', '#5E35B1', '#4527A0', '#311B92'
-      ]
     }
   },
   created () {
-    let date = new Date().getHours()
-    this.time = date
-    if (date >= 6 && date <= 18) {
-      this.daytime = true
-    } else {
-      this.daytime = false
-    }
-    this.backgroundColor = this.colors[date % 24]
   },
   methods: {
     backMain () {
@@ -113,7 +52,48 @@ export default {
 </script>
 
 <style scoped>
-.back:hover {
+::-moz-selection{background:#3A2012;color:#F3F3F5}
+::selection{background:#3A2012;color:#F3F3F5}
+.clearfix{display:inline-block}
+.clearfix::after{content:"";visibility:hidden;display:inline-block;font-size:0;clear:both;height:0}
+.tekst{color:#3A2012;font-family:Arial,sans-serif;text-transform:uppercase;font-size:14px;line-height:28px;font-weight:bold;display:block;letter-spacing:2px;max-width:100%;text-align:center;position:absolute;bottom:20px;left:30px;z-index:99}
+a{color:#D67B32;text-decoration:none;cursor:pointer}
+a:hover{text-decoration:underline}
+.outer{display:table;margin:0 auto;height:100%}
+.middle{display:table-cell;vertical-align:middle}
+.main{padding:4px}
+@media (max-width:560px){.main{-webkit-transform:scale(0.75);transform:scale(0.75)}}
+@media (max-width:420px){.main{-webkit-transform:scale(0.5);transform:scale(0.5);min-width:200px}body,html{overflow-x:auto}}
+.squirrel{position:relative;width:166px;height:214px;margin-top:260px;margin-left:160px}
+.squirrel .skin{position:absolute;top:0;left:0;width:166px;height:214px;background:#F99C3C;border-radius:0 110px 0 0}
+.squirrel .ear{position:absolute;top:-50px;width:25px;height:50px;background:#F99C3C}
+.squirrel .ear.left{left:-25px;border-radius:25px 0 0 25px}
+.squirrel .ear.right{left:80px;border-radius:0 25px 25px 0}
+.squirrel .eye{position:absolute;top:50px;width:50px;height:50px;background:#FEFEFE;border-radius:50px}
+.squirrel .eye.left{left:25px}
+.squirrel .eye.right{right:25px}
+.squirrel .eye span{position:absolute;top:50%;left:50%;width:26px;height:26px;margin-top:-13px;margin-left:-13px;background:#3A2012;border-radius:26px}
+.squirrel .belly{position:absolute;bottom:0;left:50%;width:100px;height:50px;margin-left:-50px;background:#FABA71;border-radius:50px 50px 0 0}
+.squirrel .nose{position:absolute;top:103px;left:50%;width:12px;height:6px;margin-left:-6px;background:#3A2012;border-radius:0 0 12px 12px}
+.squirrel .mouth{position:absolute;top:116px;left:50%;width:50px;height:25px;margin-left:-25px;background:#3A2012;border-radius:0 0 25px 25px}
+.squirrel .mouth .tooth{position:absolute;top:0;left:50%;width:26px;height:13px;margin-left:-13px;background:#FEFEFE;border-radius:0 0 13px 13px}
+.squirrel .leg{position:absolute;bottom:0;width:25px;height:12px;background:#3A2012;border-radius:25px 25px 0 0}
+.squirrel .leg.left{left:25px}
+.squirrel .leg.right{right:25px}
+.squirrel .tail{position:absolute;bottom:0;left:-111px;width:166px;height:310px}
+.squirrel .tail .square{position:absolute;top:0;left:0;width:166px;height:310px;background:#D67B32;border-radius:0 0 0 110px}
+.squirrel .tail .square .sh{position:absolute;top:0;right:0;width:66px;height:310px;background:#D67B32;-moz-box-shadow:inset -60px 0 60px -60px rgba(0,0,0,0.2);-webkit-box-shadow:inset -60px 0 60px -60px rgba(0,0,0,0.2);box-shadow:inset -60px 0 60px -60px rgba(0,0,0,0.2)}
+.squirrel .tail .circle{position:absolute;top:-150px;left:-138px;width:304px;height:304px;background:#D67B32;border-radius:152px;-webkit-transform:rotate(15deg);transform:rotate(15deg);-moz-box-shadow:inset 0 0 60px rgba(0,0,0,0.2);-webkit-box-shadow:inset 0 0 60px rgba(0,0,0,0.2);box-shadow:inset 0 0 60px rgba(0,0,0,0.2)}
+.squirrel .tail .circle::before{content:"";position:absolute;bottom:0;right:0;width:152px;height:152px;background:#AD6326;border-radius:0 0 152px 0}
+.squirrel .nut{position:absolute;bottom:5px;right:-55px;width:25px;height:30px;background:#D47B33;border-radius:25px 0 0 25px}
+.squirrel .nut .hood{position:absolute;bottom:-5px;right:-20px;width:20px;height:40px;background:#3A2012;border-radius:0 25px 25px 0}
+.squirrel .nut .hood::before{content:"";position:absolute;top:50%;right:-14px;width:15px;height:8px;margin-top:-3px;background:#3A2012;border-radius:0 0 15px 15px}
+.squirrel .eye span{-webkit-animation:animation 10s infinite ease-in-out;animation:animation 10s infinite ease-in-out;-webkit-transition:all .1s ease-in-out;transition:all .1s ease-in-out}
+.squirrel:hover .eye span{position:absolute;top:65%;left:65%}
+@-webkit-keyframes animation{0%, 4%, 6%, 49%, 51%, 53%, 100%{-webkit-transform:rotateX(0deg);transform:rotateX(0deg)}5%, 50%, 52%{-webkit-transform:rotateX(90deg);transform:rotateX(90deg)}}
+@keyframes animation{0%, 4%, 6%, 49%, 51%, 53%, 100%{-webkit-transform:rotateX(0deg);transform:rotateX(0deg)}5%, 50%, 52%{-webkit-transform:rotateX(90deg);transform:rotateX(90deg)}}
+
+  .back:hover {
   transform: scale(1.2)
 }
 
@@ -122,14 +102,7 @@ export default {
     transform: translate(0, 20px)
   }
 }
-.shadowFrame {
-  width: 130px;
-  margin-top: 15px;
-}
-.shadow {
-  animation: shrink 3s ease-out infinite;
-  transform-origin: center center;
-}
+
 ellipse {
   transform-origin: center center
 }
@@ -149,12 +122,6 @@ ellipse {
   }
 }
 
-.sunny {
-  animation: rotate 3s ease-in-out 0s infinite alternate
-}
-.night {
-  animation: rotate 3s ease-in-out 0s infinite alternate
-}
 @keyframes rotate {
   0%, 75% {
     transform: rotate(-720deg)
@@ -162,20 +129,5 @@ ellipse {
   75%, 100% {
     transform: rotate(0deg)
   }
-}
-.weather {
-  color: black;
-  z-index: 2;
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  font-size: 120px;
-}
-.main {
-  color: black;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
 }
 </style>
