@@ -15,7 +15,7 @@
             </el-dropdown>
           </div></el-col>
           <el-col :span="18">
-            <div class="clock" style="right: 50px">
+            <div v-if="clockVisible" class="clock" style="right: 50px">
               <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:120px;height:40px;" src="https://www.clocklink.com/html5embed.php?clock=043&timezone=CCT&color=green&size=120&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=green"></iframe>
             </div>
             <div v-if="experienceShow" style="text-align: right; margin-top: 25px">
@@ -122,6 +122,7 @@ export default {
   data () {
     return {
       star: 0,
+      clockVisible: true,
       starDisabled: false,
       badgeHidden: false,
       nightMode: false,
@@ -205,18 +206,21 @@ export default {
       }
     },
     switchHome () {
+      this.clockVisible = true
       this.defaultActive = 'home'
       this.blockChoice = 'home'
       // this.footerShow = true
       this.experienceShow = false
     },
     switchExperience () {
+      this.clockVisible = false
       this.defaultActive = 'experience'
       this.blockChoice = 'experience'
       // this.footerShow = false
       this.experienceShow = true
     },
     switchBoard () {
+      this.clockVisible = true
       this.defaultActive = 'board'
       this.blockChoice = 'board'
       // this.footerShow = false
